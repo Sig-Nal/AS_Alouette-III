@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>alt-ger.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>kilodisk</object-name>
+  <emission>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <red>0.75</red>
+    <green>0.25</green>
+    <blue>0.5</blue>
+    <white>0.0</white>
+  </emission>
+ </animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>needle</object-name>
+	  <diffuse>
+    <red>0.75</red>
+    <green>0.25</green>
+    <blue>0.5</blue>
+	  </diffuse>
+
+	  <ambient>
+	   <red>0.72</red>
+	   <green>0.34</green>
+	   <blue>0.0</blue>
+	  </ambient>
+
+	  <specular>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </specular>
+
+	  <emission>
+	   <red>0.0</red>
+	   <green>0.0</green>
+	   <blue>0.0</blue>
+	  </emission>
+
+	  <transparency>
+	   <alpha>1.0</alpha>
+	  </transparency>
+
+	  <shininess>1</shininess>
+	</animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.36</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>kilodisk</object-name>
+  <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.036</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.01</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob</object-name>
+    <visible>true</visible>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step>0.009</step>
+        <min>0</min>
+        <max>60</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+ </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>knob</object-name>
+    <visible>true</visible>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step>-0.009</step>
+        <min>0</min>
+        <max>60</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+ </animation>
+
+
+<!-- Light cockpit--> 
+   <animation> 
+      <type>material</type>
+      <emission> 
+        <factor-prop>/controls/lighting/panel-norm</factor-prop>
+        <red>0.75</red>
+        <green>0.25</green>
+        <blue>0.25</blue>
+      </emission>
+    </animation>
+ 
+ 
+</PropertyList>
+
+

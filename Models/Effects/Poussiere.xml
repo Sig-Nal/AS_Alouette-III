@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!--
+    Usable with FlightGear
+    property gerard robin
+    Copyright License:  CREATIVE-COMMON
+-->
+        <!--     Auteur :      Gerard ROBIN               CREATIVE-COMMON        COPYRIGHT
+                 BY-NC-SA-->
+
+
+
+
+<!--<paramsx></paramsx>-->
+
+ <path>poussiere.osg</path>
+
+
+ <offsets>
+    <x-m> 0 </x-m>
+   <!-- <y-m> 00 </y-m>
+    <z-m> 00 </z-m>-->
+    <pitch-deg>85.46</pitch-deg>
+    <roll-deg>0</roll-deg>
+ </offsets>
+
+
+
+
+
+
+
+
+</PropertyList>
