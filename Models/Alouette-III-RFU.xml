@@ -974,7 +974,7 @@
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>controls/lighting/landing-light</property>
+				<property>sim/multiplay/generic/string[4]</property>
 				<value>1</value>
 			</equals>
 			<greater-than-equals>
@@ -1031,7 +1031,7 @@
          <condition>
           <and>
                     <property>/sim/rendering/rembrandt/enabled</property>
-				    <property>controls/lighting/landing-light</property>
+				    <property>sim/multiplay/generic/string[4]</property>
           </and>
          </condition>
 		<offsets>
@@ -1049,7 +1049,7 @@
          <condition>
           <and>
                     <property>/sim/rendering/rembrandt/enabled</property>
-				    <property>controls/lighting/landing-light</property>
+				    <property>sim/multiplay/generic/string[4]</property>
           </and>
          </condition>
 		<offsets>
@@ -1106,7 +1106,7 @@
          <condition>
           <and>
                     <property>/sim/rendering/rembrandt/enabled</property>
-				    <property>controls/lighting/landing-light[1]</property>
+				    <property>sim/multiplay/generic/string[5]</property>
           </and>
          </condition>
 		<offsets>

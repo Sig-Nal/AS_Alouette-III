@@ -120,10 +120,17 @@
 				<float>0</float>
 				<float>1</float>
 
-				<string>0</string>
-				<string>1</string>
+				<string n="0" alias="/sim/multiplay/callsign"/>
+				<string n="1" alias="/controls/lighting/nav-lights"/>
+				<string n="2" alias="/controls/lighting/beacon"/>
+				<string n="3" alias="/controls/lighting/strobe"/>
+				<string n="4" alias="/controls/lighting/landing-light"/>
+				<string n="5" alias="/controls/lighting/landing-light[1]"/>
+				<string n="6" alias="/surface-positions/left-door-position"/>
+				<string n="7" alias="/sim/model/rescue"/>
+				<string n="8" alias="/sim/model/rescue-lift"/>
 
-	            <int>0</int>
+				<!--int n="0" alias="/controls/lighting/landing-light"/-->
 
 		</generic>
 	</multiplay>

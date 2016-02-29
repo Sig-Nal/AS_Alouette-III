@@ -10,7 +10,6 @@
   </effect>
 
   <animation>
-    <!-- Objets opaques -->
 
     <!-- Objets transparents -->
     <object-name>flash</object-name>
@@ -63,14 +62,9 @@
 <condition>
 
             <and>
-				<property>controls/lighting/landing-light</property>
-                <!--equals>
-                    <property>gear/gear[0]/position-norm</property>
-                    <value>1.0</value>
-                </equals-->
+				<property>sim/multiplay/generic/string[4]</property>
             </and>
     
-<!--<property>controls/lighting/landing-lights</property> -->
 </condition>
 </animation>
 

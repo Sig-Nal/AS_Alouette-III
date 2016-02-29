@@ -46,10 +46,6 @@
           <property>controls/switches/landing-light</property>
           <value> 1 </value>
         </equals>
-        <!--equals>
-          <property>controls/electric/battery-switch</property>
-          <value> 1 </value>
-        </equals-->
       </and>
     </condition>
   </animation>

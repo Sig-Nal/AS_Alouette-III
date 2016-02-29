@@ -25,7 +25,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-				<property>controls/lighting/landing-light[1]</property>
+				<property>sim/multiplay/generic/string[5]</property>
       </binding>
     </action>
   </animation>
@@ -33,7 +33,7 @@
     <animation>
         <type>rotate</type>
         <object-name>switch</object-name>
-				<property>controls/lighting/landing-light[1]</property>
+				<property>sim/multiplay/generic/string[5]</property>
         <factor>-60</factor>
         <!--center>
             <x-m>-0.041</x-m>
