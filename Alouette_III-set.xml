@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Gerard Robin and David
+    Copyright License:  CREATIVE COMMON
+-->
+<!--
+************************************************************************
+
+************************************************************************
+-->
+
+<PropertyList>
+ <sim>
+	<description>Alouette_III_Helicopter</description>
+        <author>Gerard Robin, update David, Josh (FDM)</author>
+        <status>alpha, "CREATIVE COMMON BY-NC-SA Copyright" 2011-04-27</status>
+        <version> 0.6.5 </version>
+	<flight-model>yasim</flight-model>
+	<aero>alouetteIII-II</aero>
+        <startup>
+	<splash-texture>Aircraft/AS_Alouette-III/al_III-splash.png</splash-texture>
+        </startup>
+	<fuel-fraction>0.65</fuel-fraction>
+	<sound>
+		<path>Aircraft/AS_Alouette-III/Sounds/sound.xml</path>
+	</sound>
+
+    <submodels> 
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/AS_Alouette-III/Models/Effects/guns-f6f/submodels.xml</path>
+    </submodels>
+
+        <instrumentation>
+            <path>Aircraft/AS_Alouette-III/Instruments/instrumentation.xml</path>
+        </instrumentation>
+
+        <hud>
+            <path n="1">Huds/default.xml</path>
+            <visibility n="1">false</visibility>
+            <enable3d n="1">false</enable3d>
+        </hud>
+
+	<virtual-cockpit archive="y">true</virtual-cockpit>
+    <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>	
+	<chase-distance-m type="double" archive="y">-20.0</chase-distance-m>
+
+  <model>
+    <path archive="y">Aircraft/AS_Alouette-III/Models/Alouette-III-RFN.xml</path>
+                    <al3>
+                            <nav-lights type="bool">true</nav-lights>
+                            <state type="int">0</state>
+                            <rotor-step-deg type="float">0.0</rotor-step-deg>
+                    </al3>
+  </model>
+
+  <view>
+        <internal archive="y">true</internal>
+           <config>
+                     <x-offset-m archive="y">-0.1</x-offset-m><!--right-->   <!--  0.556831 - right-seat  -->   
+                     <y-offset-m archive="y">0.59</y-offset-m><!--up-->
+                     <z-offset-m archive="y">-1.65</z-offset-m><!--back-->
+                     <pitch-offset-deg>-12</pitch-offset-deg>
+                     <default-field-of-view-deg type="double">95.0</default-field-of-view-deg>
+           </config>
+  </view>
+  <view n="100">
+      <name>Rescued_View</name>
+      <type>lookfrom</type>
+      <internal>false</internal>
+      <config>
+          <from-model type="bool">true</from-model>
+          <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+          <x-offset-m >-4.00</x-offset-m>
+          <y-offset-m >-0</y-offset-m>
+          <z-offset-m >10</z-offset-m>
+          <pitch-offset-deg>0</pitch-offset-deg>
+          <default-field-of-view-deg>75</default-field-of-view-deg>
+      </config>
+    </view>
+  <view n="101">
+      <name>Door_View_L</name>
+      <type>lookfrom</type>
+      <internal>true</internal>
+      <config>
+          <from-model type="bool">true</from-model>
+          <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+          <x-offset-m >-0.556</x-offset-m>
+          <y-offset-m > 0.556</y-offset-m>
+          <z-offset-m >-0.554</z-offset-m>
+          <pitch-offset-deg>0</pitch-offset-deg>
+          <default-field-of-view-deg>115</default-field-of-view-deg>
+      </config>
+    </view>
+  <view n="102">
+      <name>Door_View_R</name>
+      <type>lookfrom</type>
+      <internal>true</internal>
+      <config>
+          <from-model type="bool">true</from-model>
+          <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+          <x-offset-m > 0.556</x-offset-m>
+          <y-offset-m > 0.556</y-offset-m>
+          <z-offset-m >-0.554</z-offset-m>
+          <pitch-offset-deg>0</pitch-offset-deg>
+          <default-field-of-view-deg>115</default-field-of-view-deg>
+      </config>
+    </view>
+  <chase-distance-m type="double">-15.0</chase-distance-m>
+    <weight n="0">
+            <name>Pilot+passengers</name>
+            <weight-lb>700</weight-lb>
+            <max-lb>1000</max-lb>
+    </weight>
+
+    <help include="Help/Alouette-III-help.xml"/>
+
+	<multiplay>
+		<generic>
+				<float>0</float>
+				<float>1</float>
+
+				<string>0</string>
+				<string>1</string>
+
+	            <int>0</int>
+
+		</generic>
+	</multiplay>
+ </sim>
+
+
+ <controls>
+	<flight>
+                <aileron-trim>-0.00000</aileron-trim>
+                <rudder-trim>-0.0000</rudder-trim>
+		<wing-fold>0</wing-fold>
+	</flight>
+	<engines>
+                <engine n="0">
+                        <magnetos>0</magnetos>
+                        <rotorgear>0</rotorgear>
+                        <master-bat>false</master-bat>
+                        <throttle>1</throttle>
+                </engine>
+                <engine n="1">
+                        <throttle>1</throttle>
+                </engine>
+	</engines>
+        <gear>
+                <brake-parking type="double">1.0</brake-parking>
+        </gear>
+        <rotor>
+            <brake>1</brake>
+            <fold-pos>0</fold-pos>
+            <folded>0</folded>
+        </rotor>
+        <electric>
+            <master-switch>false</master-switch>
+            <battery-switch>false</battery-switch>
+        </electric>
+        <switches>
+            <landing-light>true</landing-light>
+            <master-avionics>false</master-avionics>
+        </switches>
+        <lighting>
+            <instruments-norm type="double">0.2</instruments-norm>
+            <beacon type="bool">false</beacon>
+            <strobe type="bool">false</strobe>
+            <nav-lights type="bool">false</nav-lights>
+        </lighting>
+ </controls>
+
+ <instrumentation>
+     <gsdi>
+         <serviceable type="bool">true</serviceable>
+         <enabled type="bool">true</enabled>
+     </gsdi>
+</instrumentation>
+
+	<input include="Inputs/Alouette-III-input.xml"/>
+
+	<nasal>
+            <al3>
+                <file>Aircraft/AS_Alouette-III/System/al3.nas</file>
+                <file>Aircraft/AS_Alouette-III/System/light.nas</file>
+            </al3>
+            <terrain>
+                <file>Aircraft/AS_Alouette-III/System/terrain.nas</file>
+            </terrain>
+            <rescue>
+                <file>Aircraft/AS_Alouette-III/System/rescue_operation.nas</file>
+            </rescue>
+    <guns>
+      <file>Aircraft/AS_Alouette-III/System/weapons.nas</file>
+    </guns>
+
+	</nasal>
+
+
+</PropertyList>
